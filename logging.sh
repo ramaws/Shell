@@ -1,4 +1,4 @@
-#!/bin/bash
+zc#!/bin/bash
 key=/home/ec2-user/ram-cloud.pem
 file=/home/ec2-user/hosts.txt
 host=`hostname`
@@ -14,3 +14,10 @@ echo -e "\n::Load Avg::\n">> ram.txt
 uptime >> ram.txt
 done
 
+#!/bin/bash
+set -x
+for i in `cat test.txt`;
+do
+echo "Users under $i" >> ram.txt;
+ssh -i ../private.pem rguthul@root@sedciwcm0250@susshi.edc.corpintra.net cat /etc/passwd | awk '{print $1 $2}' >> ram.txt;
+done
