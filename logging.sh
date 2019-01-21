@@ -19,5 +19,5 @@ set -x
 for i in `cat test.txt`;
 do
 echo "Users under $i" >> ram.txt;
-ssh -i ../private.pem rguthul@root@sedciwcm0250@susshi.edc.corpintra.net cat /etc/passwd | awk '{print $1 $2}' >> ram.txt;
+ssh -i ../private.pem rguthul@root@vmname@edc.personl.net cat /etc/passwd | awk '{print $1 $2}' >> ram.txt;
 done
