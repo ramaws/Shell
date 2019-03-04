@@ -1,4 +1,4 @@
-zc#!/bin/bash
+#!/bin/bash
 key=/home/ec2-user/ram-cloud.pem
 file=/home/ec2-user/hosts.txt
 host=`hostname`
